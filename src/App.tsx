@@ -1,12 +1,11 @@
 import React, { FC } from 'react';
 import { Button } from 'antd';
+import { createBrowserRouter, RouterProvider, Link } from 'react-router-dom';
+import { routes } from './routes';
 import './App.less';
 
-const App: FC = () => (
-  <div className="App">
-    <Button type="primary">str</Button>
-    <h1 className="text-3xl font-bold underline">Hello world!</h1>
-  </div>
-);
+const router = createBrowserRouter(routes);
+
+const App: FC = () => <RouterProvider router={router} />;
 
 export default App;
